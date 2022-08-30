@@ -1,3 +1,4 @@
+modified to add Sidekick Agent
 # Employee Management System
 
 ![ERP](ERP.gif)
@@ -50,4 +51,4 @@ I created an online employee management system web application that will allow u
 &nbsp; &nbsp; 1. npm install <br />
 &nbsp; &nbsp; 2. npm start <br /><br />
 
-The front-end app runs on localhost:3000. The REST API is located in the /server folder and runs on localhost:8080. The data is being served by index.js located n the /server/index.js and actual data from a plexxis.db is located in the /server/repo folder (if it does not exist, it will be created when the application is run for the first time). Run "npm start" to start both servers.
+The front-end app runs on localhost:3000. The REST API is located in the /server folder and runs on localhost:8081. The data is being served by index.js located n the /server/index.js and actual data from a plexxis.db is located in the /server/repo folder (if it does not exist, it will be created when the application is run for the first time). Run "npm start" to start both servers.

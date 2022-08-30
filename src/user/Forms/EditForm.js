@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import axios from 'axios';
 import { closeForm } from '../../utils/CloseForm';
 
-const url = 'http://localhost:8080/api/employees';
-const editUrl = 'http://localhost:8080/api/edit/employees';
+const url = 'http://localhost:8081/api/employees';
+const editUrl = 'http://localhost:8081/api/edit/employees';
 
 const colors = [
   'White',

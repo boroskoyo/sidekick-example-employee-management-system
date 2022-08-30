@@ -1,4 +1,5 @@
 /* eslint-disable consistent-return */
+const SidekickDebugger = require('@runsidekick/sidekick-agent-nodejs');
 const express = require('express');
 const cors = require('cors');
 
@@ -6,6 +7,20 @@ const app = express();
 const bodyParser = require('body-parser');
 // const employees = require('./data/employees.json');
 const db = require('./database.js');
+
+SidekickDebugger.start({
+  apiKey: 'my-token',
+  brokerHost: 'ws://127.0.0.1',
+  brokerPort: 7777,
+  maxDataSize: 2048,
+  maxStringLength: 2048,
+  maxFrames: 2048,
+  maxProperties: 2048,
+  maxParseDepth: 2048,
+  applicationName: 'employee-system',
+  applicationVersion: '1.0.0',
+  applicationStage: 'prod',
+});
 
 const corsOptions = {
   origin: 'http://localhost:3000',
@@ -194,7 +209,7 @@ app.delete('/api/employees/:id', cors(corsOptions), (req, res, next) => {
 });
 
 // SERVER PORT
-const HTTP_PORT = process.env.PORT || 8080;
+const HTTP_PORT = process.env.PORT || 8081;
 
 // START SERVER
 app.listen(HTTP_PORT, () => {
