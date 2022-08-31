@@ -1,4 +1,4 @@
-modified to add Sidekick Agent
+modified to work with Sidekick Agent
 # Employee Management System
 
 ![ERP](ERP.gif)
